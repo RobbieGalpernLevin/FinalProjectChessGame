@@ -126,6 +126,7 @@ public class GUI implements MouseListener
     {
         frame = new JFrame("Chess");
         frame.setResizable(false);
+        frame.setLocation(700, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         board = new JPanel();
         game = new Game();
@@ -391,6 +392,7 @@ public class GUI implements MouseListener
         board.add(f1);
         board.add(g1);
         board.add(h1);
+        board.addMouseListener(this);
         frame.add(board);
         frame.pack();
         frame.setVisible(true);
@@ -402,321 +404,1335 @@ public class GUI implements MouseListener
         {
             if(e.getX() <= 50 && e.getY() <= 50)
             {
+                System.out.println("first");
                 game.setPiece(0, 0);
             }
-            else if (e.getX() <= 50 && ((e.getY() > 50) && e.getY() <= 100)))
+            else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100)))
             {
                 game.setPiece(0, 1);
             }
-            else if (e.getX() <= 50 && ((e.getY() > 100) && e.getY() <= 150)))
+            else if (e.getX() <= 50 && ((e.getY() > 100) && (e.getY() <= 150)))
             {
                 game.setPiece(0, 2);
             }
-            else if (e.getX() <= 50 && ((e.getY() > 150) && e.getY() <= 200)))
+            else if (e.getX() <= 50 && ((e.getY() > 150) && (e.getY() <= 200)))
             {
                 game.setPiece(0, 3);
             }
-            else if (e.getX() <= 50 && ((e.getY() > 200) && e.getY() <= 250)))
+            else if (e.getX() <= 50 && ((e.getY() > 200) && (e.getY() <= 250)))
             {
                 game.setPiece(0, 4);
             }
-            else if (e.getX() <= 50 && ((e.getY() > 250) && e.getY() <= 300)))
+            else if (e.getX() <= 50 && ((e.getY() > 250) && (e.getY() <= 300)))
             {
                 game.setPiece(0, 5);
             }
-            else if (e.getX() <= 50 && ((e.getY() > 300) && e.getY() <= 350)))
+            else if (e.getX() <= 50 && ((e.getY() > 300) && (e.getY() <= 350)))
             {
                 game.setPiece(0, 6);
             }
-            else if (e.getX() <= 50 && ((e.getY() > 350) && e.getY() <= 400)))
+            else if (e.getX() <= 50 && ((e.getY() > 350) && (e.getY() <= 400)))
             {
                 game.setPiece(0, 7);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && e.getY() <= 50)
-        {
-            game.setPiece(1, 0);
-        }
-        else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 50) && (e.getY() <= 100)))
-        {
-            game.setPiece(1, 1);
-        }
-        else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 100) && (e.getY() <= 150)))
-        {
-            game.setPiece(1, 2);
-        }
-        else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 150) && (e.getY() <= 200)))
-        {
-            game.setPiece(1, 3);
-        }
-        else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 200) && (e.getY() <= 250)))
-        {
-            game.setPiece(1, 4);
-        }
-        else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 250) && (e.getY() <= 300)))
-        {
-            game.setPiece(1, 5);
-        }
-        else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 300) && (e.getY() <= 350)))
-        {
-            game.setPiece(1, 6);
-        }
-        else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 350) && (e.getY() <= 400)))
-        {
-            game.setPiece(1, 7);
-        }
-        else if (((e.getX() > 100) && (e.getX() <= 150)) && e.getY() <= 50)
-        {
-            game.setPiece(2, 0);
-        }
-        else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 50) && (e.getY() <= 100)))
-        {
-            game.setPiece(2, 1);
-        }
-        else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 100) && (e.getY() <= 150)))
-        {
-            game.setPiece(2, 2);
-        }
-        else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 150) && (e.getY() <= 200)))
-        {
-            game.setPiece(2, 3);
-        }
-        else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 200) && (e.getY() <= 250)))
-        {
-            game.setPiece(2, 4);
-        }
-        else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 250) && (e.getY() <= 300)))
-        {
-            game.setPiece(2, 5);
-        }
-        else if (((e.getX() > 100 && (e.getX() <= 150)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setPiece(1, 0);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setPiece(1, 1);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setPiece(1, 2);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setPiece(1, 3);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setPiece(1, 4);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setPiece(1, 5);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setPiece(1, 6);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setPiece(1, 7);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && e.getY() <= 50)
+            {
+                game.setPiece(2, 0);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setPiece(2, 1);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setPiece(2, 2);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setPiece(2, 3);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setPiece(2, 4);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setPiece(2, 5);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
                 game.setPiece(2, 6);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 350) && (e.getY() <= 400)))
-        {
-            game.setPiece(2, 7);
-        }
-        else if (((e.getX() > 150) && (e.getX() <= 200)) && e.getY() <= 50)
-        {
-            game.setPiece(3, 0);
-        }
-        else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 50) && (e.getY() <= 100)))
-        {
-            game.setPiece(3, 1);
-        }
-        else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 100) && (e.getY() <= 150)))
-        {
-            game.setPiece(3, 2);
-        }
-        else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 150) && (e.getY() <= 200)))
-        {
-            game.setPiece(3, 3);
-        }
-        else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 200) && (e.getY() <= 250)))
-        {
-            game.setPiece(3, 4);
-        }
-        else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 250) && (e.getY() <= 300)))
-        {
-            game.setPiece(3, 5);
-        }
-        else if (((e.getX() > 120) && (e.getX() <= 200)) && ((e.getY() > 300) && (e.getY() <= 350)))
-        {
-            game.setPiece(3, 6);
-        }
-        else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 350) && (e.getY() <= 400)))
-        {
-            game.setPiece(3, 7);
-        }
-        else if (((e.getX() > 200) && (e.getX() <= 250)) && e.getY() <= 50)
-        {
-            game.setPiece(4, 0);
-        }
-        else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 50) && (e.getY() <= 100)))
-        {
-            game.setPiece(4, 1);
-        }
-        else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 100) && (e.getY() <= 150)))
-        {
-            game.setPiece(4, 2);
-        }
-        else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 150) && (e.getY() <= 200)))
-        {
-            game.setPiece(4, 3);
-        }
-        else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 200) && (e.getY() <= 250)))
-        {
-            game.setPiece(4, 4);
-        }
-        else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 250) && (e.getY() <= 300)))
-        {
-            game.setPiece(4, 5);
-        }
-        else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 300) && (e.getY() <= 350)))
-        {
-            game.setPiece(4, 6);
-        }
-        else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 350) && (e.getY() <= 400)))
-        {
-            game.setPiece(4, 7);
-        }
-        else if (((e.getX() > 250) && (e.getX() <= 300)) && e.getY() <= 50)
-        {
-            game.setPiece(5, 0);
-        }
-        else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 50) && (e.getY() <= 100)))
-        {
-            game.setPiece(5, 1);
-        }
-        else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 100) && (e.getY() <= 150)))
-        {
-            game.setPiece(5, 2);
-        }
-        else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 150) && (e.getY() <= 200)))
-        {
-            game.setPiece(5, 3);
-        }
-        else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 200) && (e.getY() <= 250)))
-        {
-            game.setPiece(5, 4);
-        }
-        else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 250) && (e.getY() <= 300)))
-        {
-            game.setPiece(5, 5);
-        }
-        else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 300) && (e.getY() <= 350)))
-        {
-            game.setPiece(5, 6);
-        }
-        else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 350) && (e.getY() <= 400)))
-        {
-            game.setPiece(5, 7);
-        }
-        else if (((e.getX() > 300) && (e.getX() <= 350)) && e.getY() <= 50)
-        {
-            game.setPiece(6, 0);
-        }
-        else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 50) && (e.getY() <= 100)))
-        {
-            game.setPiece(6, 1);
-        }
-        else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 100) && (e.getY() <= 150)))
-        {
-            game.setPiece(6, 2);
-        }
-        else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 150) && (e.getY() <= 200)))
-        {
-            game.setPiece(6, 3);
-        }
-        else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 200) && (e.getY() <= 250)))
-        {
-            game.setPiece(6, 4);
-        }
-        else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 250) && (e.getY() <= 300)))
-        {
-            game.setPiece(6, 5);
-        }
-        else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 300) && (e.getY() <= 350)))
-        {
-            game.setPiece(6, 6);
-        }
-        else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 350) && (e.getY() <= 400)))
-        {
-            game.setPiece(6, 7);
-        }
-        else if (((e.getX() > 350) && (e.getX() <= 400)) && e.getY() <= 50)
-        {
-            game.setPiece(7, 0);
-        }
-        else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 50) && (e.getY() <= 100)))
-        {
-            game.setPiece(7, 1);
-        }
-        else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 100) && (e.getY() <= 150)))
-        {
-            game.setPiece(7, 2);
-        }
-        else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 150) && (e.getY() <= 200)))
-        {
-            game.setPiece(7, 3);
-        }
-        else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 200) && (e.getY() <= 250)))
-        {
-            game.setPiece(7, 4);
-        }
-        else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 250) && (e.getY() <= 300)))
-        {
-            game.setPiece(7, 5);
-        }
-        else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 300) && (e.getY() <= 350)))
-        {
-            game.setPiece(7, 6);
+            {
+                game.setPiece(2, 7);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && e.getY() <= 50)
+            {
+                game.setPiece(3, 0);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setPiece(3, 1);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setPiece(3, 2);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setPiece(3, 3);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setPiece(3, 4);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setPiece(3, 5);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setPiece(3, 6);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setPiece(3, 7);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && e.getY() <= 50)
+            {
+                game.setPiece(4, 0);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setPiece(4, 1);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setPiece(4, 2);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setPiece(4, 3);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setPiece(4, 4);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setPiece(4, 5);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setPiece(4, 6);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setPiece(4, 7);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && e.getY() <= 50)
+            {
+                game.setPiece(5, 0);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setPiece(5, 1);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setPiece(5, 2);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setPiece(5, 3);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setPiece(5, 4);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setPiece(5, 5);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setPiece(5, 6);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setPiece(5, 7);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && e.getY() <= 50)
+            {
+                game.setPiece(6, 0);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setPiece(6, 1);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setPiece(6, 2);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setPiece(6, 3);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setPiece(6, 4);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setPiece(6, 5);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setPiece(6, 6);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setPiece(6, 7);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && e.getY() <= 50)
+            {
+                game.setPiece(7, 0);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setPiece(7, 1);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setPiece(7, 2);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setPiece(7, 3);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setPiece(7, 4);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setPiece(7, 5);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setPiece(7, 6);
+            }
+            else
+            {
+                game.setPiece(7, 7);
+            }
         }
         else
         {
-            game.setPiece(7, 7);
-        }
-        }
-        else
-        {
+            System.out.println("second");
+            if(e.getX() <= 50 && e.getY() <= 50)
+            {
+                game.setSquare(0, 0);
+            }
+            else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setSquare(0, 1);
+            }
+            else if (e.getX() <= 50 && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setSquare(0, 2);
+            }
+            else if (e.getX() <= 50 && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setSquare(0, 3);
+            }
+            else if (e.getX() <= 50 && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setSquare(0, 4);
+            }
+            else if (e.getX() <= 50 && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setSquare(0, 5);
+            }
+            else if (e.getX() <= 50 && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setSquare(0, 6);
+            }
+            else if (e.getX() <= 50 && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setSquare(0, 7);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && e.getY() <= 50)
+            {
+                game.setSquare(0, 1);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setSquare(1, 1);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setSquare(1, 2);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setSquare(1, 3);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setSquare(1, 4);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setSquare(1, 5);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setSquare(1, 6);
+            }
+            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setSquare(1, 7);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && e.getY() <= 50)
+            {
+                game.setSquare(2, 0);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setSquare(2, 1);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setSquare(2, 2);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setSquare(2, 3);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setSquare(2, 4);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setSquare(2, 5);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setSquare(2, 6);
+            }
+            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setSquare(2, 7);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && e.getY() <= 50)
+            {
+                game.setSquare(3, 0);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setSquare(3, 1);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setSquare(3, 2);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setSquare(3, 3);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setSquare(3, 4);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setSquare(3, 5);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setSquare(3, 6);
+            }
+            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setSquare(3, 7);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && e.getY() <= 50)
+            {
+                game.setSquare(4, 0);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setSquare(4, 1);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setSquare(4, 2);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setSquare(4, 3);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setSquare(4, 4);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setSquare(4, 5);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setSquare(4, 6);
+            }
+            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setSquare(4, 7);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && e.getY() <= 50)
+            {
+                game.setSquare(5, 0);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setSquare(5, 1);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setSquare(5, 2);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setSquare(5, 3);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setSquare(5, 4);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setSquare(5, 5);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setSquare(5, 6);
+            }
+            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setSquare(5, 7);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && e.getY() <= 50)
+            {
+                game.setSquare(6, 0);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setSquare(6, 1);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setSquare(6, 2);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setSquare(6, 3);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setSquare(6, 4);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setSquare(6, 5);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setSquare(6, 6);
+            }
+            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 350) && (e.getY() <= 400)))
+            {
+                game.setSquare(6, 7);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && e.getY() <= 50)
+            {
+                game.setSquare(7, 0);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
+                game.setSquare(7, 1);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
+                game.setSquare(7, 2);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
+                game.setSquare(7, 3);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 200) && (e.getY() <= 250)))
+            {
+                game.setSquare(7, 4);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 250) && (e.getY() <= 300)))
+            {
+                game.setSquare(7, 5);
+            }
+            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 300) && (e.getY() <= 350)))
+            {
+                game.setSquare(7, 6);
+            }
+            else
+            {
+                game.setSquare(7, 7);
+            }
+            game.printBoard();
             if(game.getToRow() == 0)
             {
                 if(game.getToCol() == 0)
                 {
-                    a8 = ;
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        a8.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        a8.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        a8.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        a8.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        a8.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        a8.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        a8.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        a8.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        a8.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        a8.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        a8.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        a8.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        a8.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        a8.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        a8.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        a8.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        a8.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        a8.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        a8.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        a8.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        a8.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        a8.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        a8.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        a8.setIcon(BKD);
+                    }
+
                 }
                 else if(game.getToCol() == 1)
                 {
-                    b8 = ;
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        b8.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        b8.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        b8.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        b8.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        b8.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        b8.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        b8.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        b8.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        b8.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        b8.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        b8.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        b8.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        b8.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        b8.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        b8.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        b8.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        b8.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        b8.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        b8.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        b8.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        b8.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        b8.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        b8.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        b8.setIcon(BKD);
+                    }
                 }
                 else if(game.getToCol() == 2)
                 {
-                    c8 = ;
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        c8.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        c8.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        c8.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        c8.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        c8.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        c8.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        c8.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        c8.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        c8.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        c8.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        c8.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        c8.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        c8.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        c8.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        c8.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        c8.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        c8.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        c8.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        c8.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        c8.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        c8.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        c8.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        c8.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        c8.setIcon(BKD);
+                    }
                 }
                 else if(game.getToCol() == 3)
                 {
-                    d8 = ;
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        d8.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        d8.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        d8.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        d8.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        d8.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        d8.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        d8.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        d8.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        d8.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        d8.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        d8.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        d8.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        d8.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        d8.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        d8.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        d8.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        d8.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        d8.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        d8.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        d8.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        d8.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        d8.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        d8.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        d8.setIcon(BKD);
+                    }
                 }
                 else if(game.getToCol() == 4)
                 {
-                    e8 = ;
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        e8.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        e8.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        e8.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        e8.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        e8.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        e8.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        e8.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        e8.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        e8.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        e8.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        e8.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        e8.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        e8.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        e8.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        e8.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        e8.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        e8.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        e8.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        e8.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        e8.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        e8.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        e8.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        e8.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        e8.setIcon(BKD);
+                    }
                 }
                 else if(game.getToCol() == 5)
                 {
-                    f8 = ;
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        f8.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        f8.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        f8.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        f8.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        f8.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        f8.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        f8.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        f8.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        f8.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        f8.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        f8.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        f8.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        f8.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        f8.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        f8.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        f8.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        f8.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        f8.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        f8.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        f8.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        f8.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        f8.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        f8.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        f8.setIcon(BKD);
+                    }
                 }
                 else if(game.getToCol() == 6)
                 {
-                    g8 = ;
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        g8.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        g8.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        g8.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        g8.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        g8.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        g8.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        g8.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        g8.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        g8.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        g8.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        g8.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        g8.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        g8.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        g8.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        g8.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        g8.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        g8.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        g8.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        g8.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        g8.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        g8.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        g8.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        g8.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        g8.setIcon(BKD);
+                    }
                 }
                 else
                 {
-                    h8 = ;
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        h8.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        h8.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        h8.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        h8.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        h8.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        h8.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        h8.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        h8.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        h8.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        h8.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        h8.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        h8.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        h8.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        h8.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        h8.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        h8.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        h8.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        h8.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        h8.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        h8.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        h8.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        h8.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        h8.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        h8.setIcon(BKD);
+                    }
                 }
             }
         }
-
-
     }
 
     public void mousePressed(MouseEvent e)
     {
-
     }
 
     public void mouseReleased(MouseEvent e)
     {
-
     }
 
     public void mouseEntered(MouseEvent e)
     {
-
     }
 
     public void mouseExited(MouseEvent e)
     {
-
     }
 
 }

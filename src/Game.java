@@ -1,6 +1,5 @@
 import java.util.Arrays;
-public class Game
-{
+public class Game {
     private String[][] boardArray;
     String piece;
     String square;
@@ -9,17 +8,16 @@ public class Game
     int toRow;
     int toCol;
 
-    public Game()
-    {
+    public Game() {
         String[][] startingBoard =
-                {{"BRL","BND","BBL","BQD","BKL","BBD","BNL","BRD"},
-                 {"BPD","BPL","BPD","BPL","BPD","BPL","BPD","BPL"},
-                 {"LSQ","DSQ","LSQ","DSQ","LSQ","DSQ","LSQ","DSQ"},
-                 {"DSQ","LSQ","DSQ","LSQ","DSQ","LSQ","DSQ","LSQ"},
-                 {"LSQ","DSQ","LSQ","DSQ","LSQ","DSQ","LSQ","DSQ"},
-                 {"DSQ","LSQ","DSQ","LSQ","DSQ","LSQ","DSQ","LSQ"},
-                 {"WPL","WPD","WPL","WPD","WPL","WPD","WPL","WPD"},
-                 {"WRD","WNL","WBD","WQL","WKD","WBL","WND","WRL"}};
+                {{"BRL", "BND", "BBL", "BQD", "BKL", "BBD", "BNL", "BRD"},
+                        {"BPD", "BPL", "BPD", "BPL", "BPD", "BPL", "BPD", "BPL"},
+                        {"LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ"},
+                        {"DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ"},
+                        {"LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ"},
+                        {"DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ"},
+                        {"WPL", "WPD", "WPL", "WPD", "WPL", "WPD", "WPL", "WPD"},
+                        {"WRD", "WNL", "WBD", "WQL", "WKD", "WBL", "WND", "WRL"}};
         boardArray = startingBoard;
         piece = "";
         fromRow = -1;
@@ -29,62 +27,59 @@ public class Game
 
     }
 
-    public String getPiece()
-    {
+    public String getPiece() {
         return piece;
     }
 
-    public String getSquare()
-    {
+    public String getSquare() {
         return square;
     }
 
-    public int getFromRow()
-    {
+    public int getFromRow() {
         return fromRow;
     }
 
-    public int getFromCol()
-    {
+    public int getFromCol() {
         return fromCol;
     }
 
-    public int getToRow()
-    {
+    public int getToRow() {
         return toRow;
     }
 
-    public int getToCol()
-    {
+    public int getToCol() {
         return toCol;
     }
-    public void setPiece(int r, int c)
-    {
+
+    public String getBoardArraySpot(int r, int c) {
+        return boardArray[r][c];
+    }
+
+    public void setPiece(int r, int c) {
         piece = boardArray[r][c];
         fromRow = r;
         fromCol = c;
     }
 
-    public void setSquare(int r, int c)
-    {
+    public void setSquare(int r, int c) {
+        toRow = r;
+        toCol = c;
         changeBoard(piece, r, c, fromRow, fromCol);
-        fromRow = -1;
-        fromCol = -1;
+        toRow = r;
+        toCol = c;
         piece = "";
-        square = "";
     }
 
-    private void changeBoard(String newStr, int toRow, int toCol, int fromRowL, int fromColL)
-    {
-        if(boardArray[toRow][toCol].substring(2).equals("D"))
+    private void changeBoard(String newStr, int toRowL, int toColL, int fromRowL, int fromColL) {
+        if (boardArray[toRowL][toColL].substring(2).equals("D"))
         {
-            boardArray[toRow][toCol] = newStr.substring(0, 2) + "D";
+            boardArray[toRowL][toColL] = newStr.substring(0, 2) + "D";
         }
         else
         {
-            boardArray[toRow][toCol] = newStr.substring(0, 2) + "L";
+            boardArray[toRowL][toColL] = newStr.substring(0, 2) + "L";
         }
-        if(boardArray[fromRow][fromCol].substring(2).equals("D"))
+        if (boardArray[fromRowL][fromColL].substring(2).equals("D"))
         {
             boardArray[fromRowL][fromColL] = "DSQ";
         }
@@ -94,4 +89,16 @@ public class Game
         }
 
     }
+
+    public void printBoard()
+    {
+        for(int r = 0; r < boardArray.length; r++)
+        {
+            for(int c = 0; c < boardArray[0].length; c++)
+            {
+                System.out.println(boardArray[r][c]);
+            }
+        }
+    }
+
 }
