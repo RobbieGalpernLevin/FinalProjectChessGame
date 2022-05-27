@@ -64,10 +64,7 @@ public class Game {
     public void setSquare(int r, int c) {
         toRow = r;
         toCol = c;
-        changeBoard(piece, r, c, fromRow, fromCol);
-        toRow = r;
-        toCol = c;
-        piece = "";
+        changeBoard(piece, toRow, toCol, fromRow, fromCol);
     }
 
     private void changeBoard(String newStr, int toRowL, int toColL, int fromRowL, int fromColL) {
@@ -87,6 +84,7 @@ public class Game {
         {
             boardArray[fromRowL][fromColL] = "LSQ";
         }
+        piece = "";
 
     }
 
