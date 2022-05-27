@@ -414,35 +414,35 @@ public class GUI implements MouseListener
             }
             else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setPiece(0, 1);
+                game.setPiece(1, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setPiece(0, 2);
+                game.setPiece(2, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setPiece(0, 3);
+                game.setPiece(3, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setPiece(0, 4);
+                game.setPiece(4, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setPiece(0, 5);
+                game.setPiece(5, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setPiece(0, 6);
+                game.setPiece(6, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setPiece(0, 7);
+                game.setPiece(7, 0);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && e.getY() <= 50)
             {
-                game.setPiece(1, 0);
+                game.setPiece(0, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
@@ -450,35 +450,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setPiece(1, 2);
+                game.setPiece(2, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setPiece(1, 3);
+                game.setPiece(3, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setPiece(1, 4);
+                game.setPiece(4, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setPiece(1, 5);
+                game.setPiece(5, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setPiece(1, 6);
+                game.setPiece(6, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setPiece(1, 7);
+                game.setPiece(7, 1);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && e.getY() <= 50)
             {
-                game.setPiece(2, 0);
+                game.setPiece(0, 2);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setPiece(2, 1);
+                game.setPiece(1, 2);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
@@ -486,35 +486,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setPiece(2, 3);
+                game.setPiece(3, 2);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setPiece(2, 4);
+                game.setPiece(4, 2);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setPiece(2, 5);
+                game.setPiece(5, 2);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setPiece(2, 6);
+                game.setPiece(6, 6);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setPiece(2, 7);
+                game.setPiece(7, 2);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && e.getY() <= 50)
             {
-                game.setPiece(3, 0);
+                game.setPiece(0, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setPiece(3, 1);
+                game.setPiece(1, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setPiece(3, 2);
+                game.setPiece(2, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
@@ -522,35 +522,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setPiece(3, 4);
+                game.setPiece(4, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setPiece(3, 5);
+                game.setPiece(5, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setPiece(3, 6);
+                game.setPiece(6, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setPiece(3, 7);
+                game.setPiece(7, 3);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && e.getY() <= 50)
             {
-                game.setPiece(4, 0);
+                game.setPiece(0, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setPiece(4, 1);
+                game.setPiece(1, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setPiece(4, 2);
+                game.setPiece(2, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setPiece(4, 3);
+                game.setPiece(3, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
@@ -558,35 +558,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setPiece(4, 5);
+                game.setPiece(5, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setPiece(4, 6);
+                game.setPiece(6, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setPiece(4, 7);
+                game.setPiece(7, 4);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && e.getY() <= 50)
             {
-                game.setPiece(5, 0);
+                game.setPiece(0, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setPiece(5, 1);
+                game.setPiece(1, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setPiece(5, 2);
+                game.setPiece(2, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setPiece(5, 3);
+                game.setPiece(3, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setPiece(5, 4);
+                game.setPiece(4, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
@@ -594,35 +594,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setPiece(5, 6);
+                game.setPiece(6, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setPiece(5, 7);
+                game.setPiece(7, 5);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && e.getY() <= 50)
             {
-                game.setPiece(6, 0);
+                game.setPiece(0, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setPiece(6, 1);
+                game.setPiece(1, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setPiece(6, 2);
+                game.setPiece(2, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setPiece(6, 3);
+                game.setPiece(3, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setPiece(6, 4);
+                game.setPiece(4, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setPiece(6, 5);
+                game.setPiece(5, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
@@ -630,35 +630,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setPiece(6, 7);
+                game.setPiece(7, 6);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && e.getY() <= 50)
             {
-                game.setPiece(7, 0);
+                game.setPiece(0, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setPiece(7, 1);
+                game.setPiece(1, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setPiece(7, 2);
+                game.setPiece(2, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setPiece(7, 3);
+                game.setPiece(3, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setPiece(7, 4);
+                game.setPiece(4, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setPiece(7, 5);
+                game.setPiece(5, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setPiece(7, 6);
+                game.setPiece(6, 7);
             }
             else
             {
@@ -670,35 +670,36 @@ public class GUI implements MouseListener
             System.out.println("second");
             if(e.getX() <= 50 && e.getY() <= 50)
             {
+                System.out.println("first");
                 game.setSquare(0, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setSquare(0, 1);
+                game.setSquare(1, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setSquare(0, 2);
+                game.setSquare(2, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setSquare(0, 3);
+                game.setSquare(3, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setSquare(0, 4);
+                game.setSquare(4, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setSquare(0, 5);
+                game.setSquare(5, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setSquare(0, 6);
+                game.setSquare(6, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setSquare(0, 7);
+                game.setSquare(7, 0);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && e.getY() <= 50)
             {
@@ -710,35 +711,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setSquare(1, 2);
+                game.setSquare(2, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setSquare(1, 3);
+                game.setSquare(3, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setSquare(1, 4);
+                game.setSquare(4, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setSquare(1, 5);
+                game.setSquare(5, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setSquare(1, 6);
+                game.setSquare(6, 1);
             }
             else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setSquare(1, 7);
+                game.setSquare(7, 1);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && e.getY() <= 50)
             {
-                game.setSquare(2, 0);
+                game.setSquare(0, 2);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setSquare(2, 1);
+                game.setSquare(1, 2);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
@@ -746,35 +747,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setSquare(2, 3);
+                game.setSquare(3, 2);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setSquare(2, 4);
+                game.setSquare(4, 2);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setSquare(2, 5);
+                game.setSquare(5, 2);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setSquare(2, 6);
+                game.setSquare(6, 6);
             }
             else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setSquare(2, 7);
+                game.setSquare(7, 2);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && e.getY() <= 50)
             {
-                game.setSquare(3, 0);
+                game.setSquare(0, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setSquare(3, 1);
+                game.setSquare(1, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setSquare(3, 2);
+                game.setSquare(2, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
@@ -782,35 +783,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setSquare(3, 4);
+                game.setSquare(4, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setSquare(3, 5);
+                game.setSquare(5, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setSquare(3, 6);
+                game.setSquare(6, 3);
             }
             else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setSquare(3, 7);
+                game.setSquare(7, 3);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && e.getY() <= 50)
             {
-                game.setSquare(4, 0);
+                game.setSquare(0, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setSquare(4, 1);
+                game.setSquare(1, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setSquare(4, 2);
+                game.setSquare(2, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setSquare(4, 3);
+                game.setSquare(3, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
@@ -818,35 +819,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setSquare(4, 5);
+                game.setSquare(5, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setSquare(4, 6);
+                game.setSquare(6, 4);
             }
             else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setSquare(4, 7);
+                game.setSquare(7, 4);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && e.getY() <= 50)
             {
-                game.setSquare(5, 0);
+                game.setSquare(0, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setSquare(5, 1);
+                game.setSquare(1, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setSquare(5, 2);
+                game.setSquare(2, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setSquare(5, 3);
+                game.setSquare(3, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setSquare(5, 4);
+                game.setSquare(4, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
@@ -854,35 +855,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setSquare(5, 6);
+                game.setSquare(6, 5);
             }
             else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setSquare(5, 7);
+                game.setSquare(7, 5);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && e.getY() <= 50)
             {
-                game.setSquare(6, 0);
+                game.setSquare(0, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setSquare(6, 1);
+                game.setSquare(1, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setSquare(6, 2);
+                game.setSquare(2, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setSquare(6, 3);
+                game.setSquare(3, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setSquare(6, 4);
+                game.setSquare(4, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setSquare(6, 5);
+                game.setSquare(5, 6);
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
@@ -890,35 +891,35 @@ public class GUI implements MouseListener
             }
             else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 350) && (e.getY() <= 400)))
             {
-                game.setSquare(6, 7);
+                game.setSquare(7, 6);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && e.getY() <= 50)
             {
-                game.setSquare(7, 0);
+                game.setSquare(0, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 50) && (e.getY() <= 100)))
             {
-                game.setSquare(7, 1);
+                game.setSquare(1, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 100) && (e.getY() <= 150)))
             {
-                game.setSquare(7, 2);
+                game.setSquare(2, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 150) && (e.getY() <= 200)))
             {
-                game.setSquare(7, 3);
+                game.setSquare(3, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 200) && (e.getY() <= 250)))
             {
-                game.setSquare(7, 4);
+                game.setSquare(4, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 250) && (e.getY() <= 300)))
             {
-                game.setSquare(7, 5);
+                game.setSquare(5, 7);
             }
             else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 300) && (e.getY() <= 350)))
             {
-                game.setSquare(7, 6);
+                game.setSquare(6, 7);
             }
             else
             {
