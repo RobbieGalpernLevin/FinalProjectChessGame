@@ -12,10 +12,10 @@ public class Game {
         String[][] startingBoard =
                 {{"BRL", "BND", "BBL", "BQD", "BKL", "BBD", "BNL", "BRD"},
                         {"BPD", "BPL", "BPD", "BPL", "BPD", "BPL", "BPD", "BPL"},
-                        {"LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ"},
-                        {"DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ"},
-                        {"LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ"},
-                        {"DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ", "DSQ", "LSQ"},
+                        {"SQL", "SQD", "SQL", "SQD", "SQL", "SQD", "SQL", "SQD"},
+                        {"SQD", "SQL", "SQD", "SQL", "SQD", "SQL", "SQD", "SQL"},
+                        {"SQL", "SQD", "SQL", "SQD", "SQL", "SQD", "SQL", "SQD"},
+                        {"SQD", "SQL", "SQD", "SQL", "SQD", "SQL", "SQD", "SQL"},
                         {"WPL", "WPD", "WPL", "WPD", "WPL", "WPD", "WPL", "WPD"},
                         {"WRD", "WNL", "WBD", "WQL", "WKD", "WBL", "WND", "WRL"}};
         boardArray = startingBoard;
@@ -78,11 +78,11 @@ public class Game {
         }
         if (boardArray[fromRowL][fromColL].substring(2).equals("D"))
         {
-            boardArray[fromRowL][fromColL] = "DSQ";
+            boardArray[fromRowL][fromColL] = "SQD";
         }
         else
         {
-            boardArray[fromRowL][fromColL] = "LSQ";
+            boardArray[fromRowL][fromColL] = "SQL";
         }
         piece = "";
 

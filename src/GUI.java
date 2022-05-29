@@ -154,8 +154,8 @@ public class GUI implements MouseListener
         BQD = new ImageIcon("src/BQD.png");
         BKL = new ImageIcon("src/BKL.png");
         BKD = new ImageIcon("src/BKD.png");
-        LSQ = new ImageIcon("src/LSQ.png");
-        DSQ = new ImageIcon("src/DSQ.png");
+        LSQ = new ImageIcon("src/SQL.png");
+        DSQ = new ImageIcon("src/SQD.png");
 
         Image LSQImage = LSQ.getImage();
         Image scaledLSQ = LSQImage.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH);
@@ -670,7 +670,6 @@ public class GUI implements MouseListener
             System.out.println("second");
             if(e.getX() <= 50 && e.getY() <= 50)
             {
-                System.out.println("first");
                 game.setSquare(0, 0);
             }
             else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100)))
@@ -4110,6 +4109,3190 @@ public class GUI implements MouseListener
                     }
                 }
             }
+            if(game.getToRow() == 4)
+            {
+                if(game.getToCol() == 0)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        a4.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        a4.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        a4.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        a4.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        a4.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        a4.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        a4.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        a4.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        a4.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        a4.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        a4.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        a4.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        a4.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        a4.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        a4.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        a4.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        a4.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        a4.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        a4.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        a4.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        a4.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        a4.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        a4.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        a4.setIcon(BKD);
+                    }
+
+                }
+                else if(game.getToCol() == 1)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        b4.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        b4.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        b4.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        b4.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        b4.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        b4.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        b4.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        b4.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        b4.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        b4.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        b4.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        b4.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        b4.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        b4.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        b4.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        b4.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        b4.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        b4.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        b4.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        b4.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        b4.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        b4.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        b4.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        b4.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 2)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        c4.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        c4.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        c4.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        c4.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        c4.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        c4.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        c4.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        c4.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        c4.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        c4.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        c4.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        c4.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        c4.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        c4.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        c4.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        c4.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        c4.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        c4.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        c4.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        c4.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        c4.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        c4.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        c4.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        c4.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 3)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        d4.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        d4.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        d4.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        d4.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        d4.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        d4.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        d4.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        d4.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        d4.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        d4.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        d4.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        d4.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        d4.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        d4.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        d4.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        d4.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        d4.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        d4.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        d4.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        d4.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        d4.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        d4.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        d4.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        d4.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 4)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        e4.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        e4.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        e4.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        e4.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        e4.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        e4.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        e4.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        e4.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        e4.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        e4.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        e4.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        e4.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        e4.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        e4.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        e4.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        e4.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        e4.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        e4.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        e4.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        e4.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        e4.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        e4.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        e4.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        e4.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 5)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        f4.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        f4.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        f4.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        f4.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        f4.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        f4.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        f4.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        f4.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        f4.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        f4.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        f4.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        f4.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        f4.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        f4.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        f4.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        f4.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        f4.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        f4.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        f4.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        f4.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        f4.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        f4.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        f4.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        f4.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 6)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        g4.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        g4.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        g4.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        g4.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        g4.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        g4.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        g4.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        g4.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        g4.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        g4.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        g4.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        g4.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        g4.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        g4.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        g4.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        g4.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        g4.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        g4.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        g4.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        g4.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        g4.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        g4.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        g4.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        g4.setIcon(BKD);
+                    }
+                }
+                else
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        h4.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        h4.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        h4.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        h4.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        h4.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        h4.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        h4.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        h4.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        h4.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        h4.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        h4.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        h4.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        h4.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        h4.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        h4.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        h4.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        h4.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        h4.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        h4.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        h4.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        h4.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        h4.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        h4.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        h4.setIcon(BKD);
+                    }
+                }
+            }
+            if(game.getToRow() == 5)
+            {
+                if(game.getToCol() == 0)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        a3.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        a3.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        a3.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        a3.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        a3.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        a3.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        a3.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        a3.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        a3.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        a3.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        a3.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        a3.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        a3.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        a3.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        a3.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        a3.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        a3.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        a3.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        a3.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        a3.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        a3.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        a3.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        a3.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        a3.setIcon(BKD);
+                    }
+
+                }
+                else if(game.getToCol() == 1)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        b3.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        b3.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        b3.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        b3.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        b3.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        b3.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        b3.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        b3.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        b3.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        b3.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        b3.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        b3.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        b3.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        b3.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        b3.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        b3.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        b3.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        b3.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        b3.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        b3.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        b3.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        b3.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        b3.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        b3.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 2)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        c3.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        c3.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        c3.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        c3.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        c3.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        c3.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        c3.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        c3.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        c3.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        c3.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        c3.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        c3.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        c3.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        c3.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        c3.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        c3.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        c3.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        c3.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        c3.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        c3.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        c3.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        c3.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        c3.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        c3.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 3)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        d3.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        d3.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        d3.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        d3.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        d3.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        d3.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        d3.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        d3.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        d3.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        d3.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        d3.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        d3.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        d3.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        d3.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        d3.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        d3.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        d3.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        d3.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        d3.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        d3.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        d3.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        d3.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        d3.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        d3.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 4)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        e3.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        e3.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        e3.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        e3.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        e3.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        e3.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        e3.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        e3.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        e3.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        e3.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        e3.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        e3.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        e3.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        e3.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        e3.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        e3.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        e3.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        e3.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        e3.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        e3.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        e3.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        e3.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        e3.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        e3.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 5)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        f3.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        f3.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        f3.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        f3.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        f3.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        f3.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        f3.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        f3.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        f3.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        f3.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        f3.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        f3.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        f3.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        f3.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        f3.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        f3.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        f3.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        f3.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        f3.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        f3.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        f3.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        f3.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        f3.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        f3.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 6)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        g3.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        g3.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        g3.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        g3.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        g3.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        g3.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        g3.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        g3.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        g3.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        g3.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        g3.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        g3.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        g3.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        g3.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        g3.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        g3.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        g3.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        g3.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        g3.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        g3.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        g3.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        g3.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        g3.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        g3.setIcon(BKD);
+                    }
+                }
+                else
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        h3.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        h3.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        h3.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        h3.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        h3.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        h3.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        h3.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        h3.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        h3.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        h3.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        h3.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        h3.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        h3.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        h3.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        h3.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        h3.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        h3.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        h3.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        h3.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        h3.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        h3.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        h3.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        h3.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        h3.setIcon(BKD);
+                    }
+                }
+            }
+            if(game.getToRow() == 6)
+            {
+                if(game.getToCol() == 0)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        a2.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        a2.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        a2.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        a2.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        a2.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        a2.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        a2.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        a2.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        a2.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        a2.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        a2.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        a2.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        a2.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        a2.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        a2.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        a2.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        a2.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        a2.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        a2.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        a2.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        a2.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        a2.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        a2.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        a2.setIcon(BKD);
+                    }
+
+                }
+                else if(game.getToCol() == 1)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        b2.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        b2.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        b2.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        b2.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        b2.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        b2.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        b2.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        b2.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        b2.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        b2.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        b2.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        b2.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        b2.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        b2.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        b2.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        b2.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        b2.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        b2.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        b2.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        b2.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        b2.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        b2.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        b2.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        b2.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 2)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        c2.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        c2.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        c2.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        c2.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        c2.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        c2.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        c2.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        c2.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        c2.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        c2.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        c2.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        c2.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        c2.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        c2.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        c2.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        c2.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        c2.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        c2.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        c2.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        c2.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        c2.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        c2.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        c2.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        c2.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 3)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        d2.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        d2.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        d2.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        d2.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        d2.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        d2.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        d2.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        d2.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        d2.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        d2.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        d2.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        d2.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        d2.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        d2.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        d2.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        d2.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        d2.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        d2.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        d2.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        d2.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        d2.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        d2.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        d2.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        d2.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 4)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        e2.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        e2.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        e2.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        e2.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        e2.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        e2.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        e2.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        e2.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        e2.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        e2.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        e2.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        e2.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        e2.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        e2.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        e2.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        e2.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        e2.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        e2.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        e2.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        e2.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        e2.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        e2.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        e2.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        e2.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 5)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        f2.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        f2.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        f2.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        f2.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        f2.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        f2.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        f2.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        f2.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        f2.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        f2.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        f2.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        f2.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        f2.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        f2.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        f2.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        f2.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        f2.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        f2.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        f2.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        f2.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        f2.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        f2.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        f2.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        f2.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 6)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        g2.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        g2.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        g2.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        g2.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        g2.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        g2.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        g2.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        g2.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        g2.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        g2.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        g2.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        g2.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        g2.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        g2.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        g2.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        g2.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        g2.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        g2.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        g2.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        g2.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        g2.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        g2.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        g2.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        g2.setIcon(BKD);
+                    }
+                }
+                else
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        h2.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        h2.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        h2.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        h2.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        h2.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        h2.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        h2.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        h2.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        h2.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        h2.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        h2.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        h2.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        h2.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        h2.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        h2.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        h2.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        h2.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        h2.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        h2.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        h2.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        h2.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        h2.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        h2.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        h2.setIcon(BKD);
+                    }
+                }
+            }
+            if(game.getToRow() == 7)
+            {
+                if(game.getToCol() == 0)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        a1.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        a1.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        a1.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        a1.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        a1.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        a1.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        a1.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        a1.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        a1.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        a1.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        a1.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        a1.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        a1.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        a1.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        a1.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        a1.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        a1.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        a1.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        a1.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        a1.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        a1.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        a1.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        a1.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        a1.setIcon(BKD);
+                    }
+
+                }
+                else if(game.getToCol() == 1)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        b1.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        b1.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        b1.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        b1.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        b1.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        b1.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        b1.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        b1.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        b1.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        b1.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        b1.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        b1.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        b1.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        b1.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        b1.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        b1.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        b1.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        b1.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        b1.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        b1.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        b1.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        b1.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        b1.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        b1.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 2)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        c1.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        c1.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        c1.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        c1.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        c1.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        c1.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        c1.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        c1.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        c1.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        c1.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        c1.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        c1.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        c1.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        c1.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        c1.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        c1.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        c1.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        c1.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        c1.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        c1.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        c1.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        c1.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        c1.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        c1.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 3)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        d1.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        d1.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        d1.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        d1.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        d1.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        d1.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        d1.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        d1.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        d1.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        d1.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        d1.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        d1.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        d1.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        d1.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        d1.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        d1.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        d1.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        d1.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        d1.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        d1.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        d1.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        d1.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        d1.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        d1.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 4)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        e1.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        e1.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        e1.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        e1.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        e1.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        e1.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        e1.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        e1.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        e1.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        e1.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        e1.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        e1.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        e1.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        e1.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        e1.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        e1.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        e1.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        e1.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        e1.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        e1.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        e1.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        e1.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        e1.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        e1.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 5)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        f1.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        f1.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        f1.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        f1.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        f1.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        f1.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        f1.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        f1.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        f1.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        f1.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        f1.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        f1.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        f1.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        f1.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        f1.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        f1.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        f1.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        f1.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        f1.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        f1.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        f1.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        f1.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        f1.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        f1.setIcon(BKD);
+                    }
+                }
+                else if(game.getToCol() == 6)
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        g1.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        g1.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        g1.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        g1.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        g1.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        g1.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        g1.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        g1.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        g1.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        g1.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        g1.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        g1.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        g1.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        g1.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        g1.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        g1.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        g1.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        g1.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        g1.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        g1.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        g1.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        g1.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        g1.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        g1.setIcon(BKD);
+                    }
+                }
+                else
+                {
+                    if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
+                    {
+                        h1.setIcon(WPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
+                    {
+                        h1.setIcon(WPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
+                    {
+                        h1.setIcon(WRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRD"))
+                    {
+                        h1.setIcon(WRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WNL"))
+                    {
+                        h1.setIcon(WNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WND"))
+                    {
+                        h1.setIcon(WND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBL"))
+                    {
+                        h1.setIcon(WBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WBD"))
+                    {
+                        h1.setIcon(WBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQL"))
+                    {
+                        h1.setIcon(WQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WQD"))
+                    {
+                        h1.setIcon(WQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKL"))
+                    {
+                        h1.setIcon(WKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
+                    {
+                        h1.setIcon(WKD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
+                    {
+                        h1.setIcon(BPL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
+                    {
+                        h1.setIcon(BPD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
+                    {
+                        h1.setIcon(BRL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRD"))
+                    {
+                        h1.setIcon(BRD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BNL"))
+                    {
+                        h1.setIcon(BNL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BND"))
+                    {
+                        h1.setIcon(BND);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBL"))
+                    {
+                        h1.setIcon(BBL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BBD"))
+                    {
+                        h1.setIcon(BBD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQL"))
+                    {
+                        h1.setIcon(BQL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BQD"))
+                    {
+                        h1.setIcon(BQD);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
+                    {
+                        h1.setIcon(BKL);
+                    }
+                    else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
+                    {
+                        h1.setIcon(BKD);
+                    }
+                }
+            }
             if(game.getFromRow() == 0)
             {
                 if(game.getFromCol() == 0)
@@ -4292,96 +7475,64 @@ public class GUI implements MouseListener
                     }
                 }
             }
-            if(game.getFromRow() == 2)
-            {
-                if(game.getFromCol() == 0)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
+            if(game.getFromRow() == 2) {
+                if (game.getFromCol() == 0) {
+                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                         a6.setIcon(DSQ);
-                    }
-                    else
-                    {
+                    } else {
                         a6.setIcon(LSQ);
                     }
                 }
-                if(game.getFromCol() == 1)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
+                if (game.getFromCol() == 1) {
+                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                         b6.setIcon(DSQ);
-                    }
-                    else
-                    {
+                    } else {
                         b6.setIcon(LSQ);
                     }
                 }
-                if(game.getFromCol() == 2)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
+                if (game.getFromCol() == 2) {
+                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                         c6.setIcon(DSQ);
-                    }
-                    else
-                    {
+                    } else {
                         c6.setIcon(LSQ);
                     }
                 }
-                if(game.getFromCol() == 3)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
+                if (game.getFromCol() == 3) {
+                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                         d6.setIcon(DSQ);
-                    }
-                    else
-                    {
+                    } else {
                         d6.setIcon(LSQ);
                     }
                 }
-                if(game.getFromCol() == 4)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
+                if (game.getFromCol() == 4) {
+                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                         e6.setIcon(DSQ);
-                    }
-                    else
-                    {
+                    } else {
                         e6.setIcon(LSQ);
                     }
                 }
-                if(game.getFromCol() == 5)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
+                if (game.getFromCol() == 5) {
+                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                         f6.setIcon(DSQ);
-                    }
-                    else
-                    {
+                    } else {
                         f6.setIcon(LSQ);
                     }
                 }
-                if(game.getFromCol() == 6)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
+                if (game.getFromCol() == 6) {
+                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                         g6.setIcon(DSQ);
-                    }
-                    else
-                    {
+                    } else {
                         g6.setIcon(LSQ);
                     }
                 }
-                if(game.getFromCol() == 7)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
+                if (game.getFromCol() == 7) {
+                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                         h6.setIcon(DSQ);
-                    }
-                    else
-                    {
+                    } else {
                         h6.setIcon(LSQ);
                     }
                 }
+            }
                 if(game.getFromRow() == 3)
                 {
                     if(game.getFromCol() == 0)
@@ -4839,8 +7990,6 @@ public class GUI implements MouseListener
                 }
             }
         }
-
-    }
 
     public void mousePressed(MouseEvent e)
     {
