@@ -20,7 +20,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import javax.swing.Icon;
-import java.awt.event.MouseListener;
 import java.awt.GridLayout;
 
 import java.util.Arrays;
@@ -121,6 +120,18 @@ public class GUI implements MouseListener
     private JLabel h8;
 
     private Game game;
+    private boolean promoting;
+    private JFrame promotionFrame;
+    private JPanel promotionPanelL;
+    private JLabel promotionQueenL;
+    private JLabel promotionRookL;
+    private JLabel promotionBishopL;
+    private JLabel promotionNightL;
+    private ImageIcon promotionQueen;
+    private ImageIcon promotionRook;
+    private ImageIcon promotionBishop;
+    private ImageIcon promotionNight;
+
 
     public GUI()
     {
@@ -128,6 +139,10 @@ public class GUI implements MouseListener
         frame.setResizable(false);
         frame.setLocation(700, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        promotionFrame = new JFrame("Select Piece To Promote To");
+        promotionFrame.setResizable(false);
+        promotionFrame.setLocation(700, 300);
+        promotionFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         board = new JPanel();
         game = new Game();
         WPL = new ImageIcon("src/WPL.png");
@@ -327,6 +342,7 @@ public class GUI implements MouseListener
         h1 = new JLabel(WRL);
 
         game = new Game();
+        promoting = false;
 
     }
 
@@ -405,1227 +421,747 @@ public class GUI implements MouseListener
 
     public void mouseClicked(MouseEvent e)
     {
-        if(game.getPiece().equals(""))
+        if(promoting)
         {
-            if(e.getX() <= 50 && e.getY() <= 50)
-            {
-                game.setPiece(0, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setPiece(1, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setPiece(2, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setPiece(3, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setPiece(4, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setPiece(5, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setPiece(6, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setPiece(7, 0);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && e.getY() <= 50)
-            {
-                game.setPiece(0, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setPiece(1, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setPiece(2, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setPiece(3, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setPiece(4, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setPiece(5, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setPiece(6, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setPiece(7, 1);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && e.getY() <= 50)
-            {
-                game.setPiece(0, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setPiece(1, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setPiece(2, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setPiece(3, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setPiece(4, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setPiece(5, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setPiece(6, 6);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setPiece(7, 2);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && e.getY() <= 50)
-            {
-                game.setPiece(0, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setPiece(1, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setPiece(2, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setPiece(3, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setPiece(4, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setPiece(5, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setPiece(6, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setPiece(7, 3);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && e.getY() <= 50)
-            {
-                game.setPiece(0, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setPiece(1, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setPiece(2, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setPiece(3, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setPiece(4, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setPiece(5, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setPiece(6, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setPiece(7, 4);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && e.getY() <= 50)
-            {
-                game.setPiece(0, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setPiece(1, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setPiece(2, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setPiece(3, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setPiece(4, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setPiece(5, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setPiece(6, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setPiece(7, 5);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && e.getY() <= 50)
-            {
-                game.setPiece(0, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setPiece(1, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setPiece(2, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setPiece(3, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setPiece(4, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setPiece(5, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setPiece(6, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setPiece(7, 6);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && e.getY() <= 50)
-            {
-                game.setPiece(0, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setPiece(1, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setPiece(2, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setPiece(3, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setPiece(4, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setPiece(5, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setPiece(6, 7);
-            }
-            else
-            {
-                game.setPiece(7, 7);
-            }
+
         }
         else
         {
-            if(e.getX() <= 50 && e.getY() <= 50)
-            {
-                game.setSquare(0, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setSquare(1, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setSquare(2, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setSquare(3, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setSquare(4, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setSquare(5, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setSquare(6, 0);
-            }
-            else if (e.getX() <= 50 && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setSquare(7, 0);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && e.getY() <= 50)
-            {
-                game.setSquare(0, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setSquare(1, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setSquare(2, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setSquare(3, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setSquare(4, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setSquare(5, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setSquare(6, 1);
-            }
-            else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setSquare(7, 1);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && e.getY() <= 50)
-            {
-                game.setSquare(0, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setSquare(1, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setSquare(2, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setSquare(3, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setSquare(4, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setSquare(5, 2);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setSquare(6, 6);
-            }
-            else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setSquare(7, 2);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && e.getY() <= 50)
-            {
-                game.setSquare(0, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setSquare(1, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setSquare(2, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setSquare(3, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setSquare(4, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setSquare(5, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setSquare(6, 3);
-            }
-            else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setSquare(7, 3);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && e.getY() <= 50)
-            {
-                game.setSquare(0, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setSquare(1, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setSquare(2, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setSquare(3, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setSquare(4, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setSquare(5, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setSquare(6, 4);
-            }
-            else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setSquare(7, 4);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && e.getY() <= 50)
-            {
-                game.setSquare(0, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setSquare(1, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setSquare(2, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setSquare(3, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setSquare(4, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setSquare(5, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setSquare(6, 5);
-            }
-            else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setSquare(7, 5);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && e.getY() <= 50)
-            {
-                game.setSquare(0, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setSquare(1, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setSquare(2, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setSquare(3, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setSquare(4, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setSquare(5, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setSquare(6, 6);
-            }
-            else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 350) && (e.getY() <= 400)))
-            {
-                game.setSquare(7, 6);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && e.getY() <= 50)
-            {
-                game.setSquare(0, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 50) && (e.getY() <= 100)))
-            {
-                game.setSquare(1, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 100) && (e.getY() <= 150)))
-            {
-                game.setSquare(2, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 150) && (e.getY() <= 200)))
-            {
-                game.setSquare(3, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 200) && (e.getY() <= 250)))
-            {
-                game.setSquare(4, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 250) && (e.getY() <= 300)))
-            {
-                game.setSquare(5, 7);
-            }
-            else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 300) && (e.getY() <= 350)))
-            {
-                game.setSquare(6, 7);
-            }
-            else
-            {
-                game.setSquare(7, 7);
-            }
-            mousePressed8thRank();
-            mousePressed7thRank();
-            mousePressed6thRank();
-            mousePressed5thRank();
-            mousePressed4thRank();
-            mousePressed3rdRank();
-            mousePressed2ndRank();
-            mousePressed1stRank();
-            if(game.getFromRow() == 0)
-            {
-                if(game.getFromCol() == 0)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        a8.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        a8.setIcon(LSQ);
-                    }
+
+            if (game.getPiece().equals("")) {
+                if (e.getX() <= 50 && e.getY() <= 50) {
+                    game.setPiece(0, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setPiece(1, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setPiece(2, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setPiece(3, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setPiece(4, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setPiece(5, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setPiece(6, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setPiece(7, 0);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && e.getY() <= 50) {
+                    game.setPiece(0, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setPiece(1, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setPiece(2, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setPiece(3, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setPiece(4, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setPiece(5, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setPiece(6, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setPiece(7, 1);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && e.getY() <= 50) {
+                    game.setPiece(0, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setPiece(1, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setPiece(2, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setPiece(3, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setPiece(4, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setPiece(5, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setPiece(6, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setPiece(7, 2);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && e.getY() <= 50) {
+                    game.setPiece(0, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setPiece(1, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setPiece(2, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setPiece(3, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setPiece(4, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setPiece(5, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setPiece(6, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setPiece(7, 3);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && e.getY() <= 50) {
+                    game.setPiece(0, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setPiece(1, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setPiece(2, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setPiece(3, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setPiece(4, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setPiece(5, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setPiece(6, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setPiece(7, 4);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && e.getY() <= 50) {
+                    game.setPiece(0, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setPiece(1, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setPiece(2, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setPiece(3, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setPiece(4, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setPiece(5, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setPiece(6, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setPiece(7, 5);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && e.getY() <= 50) {
+                    game.setPiece(0, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setPiece(1, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setPiece(2, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setPiece(3, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setPiece(4, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setPiece(5, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setPiece(6, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setPiece(7, 6);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && e.getY() <= 50) {
+                    game.setPiece(0, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setPiece(1, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setPiece(2, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setPiece(3, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setPiece(4, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setPiece(5, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setPiece(6, 7);
+                } else {
+                    game.setPiece(7, 7);
                 }
-                if(game.getFromCol() == 1)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        b8.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        b8.setIcon(LSQ);
-                    }
+            } else {
+                if (e.getX() <= 50 && e.getY() <= 50) {
+                    game.setSquare(0, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setSquare(1, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setSquare(2, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setSquare(3, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setSquare(4, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setSquare(5, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setSquare(6, 0);
+                } else if (e.getX() <= 50 && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setSquare(7, 0);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && e.getY() <= 50) {
+                    game.setSquare(0, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setSquare(1, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setSquare(2, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setSquare(3, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setSquare(4, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setSquare(5, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setSquare(6, 1);
+                } else if (((e.getX() > 50) && (e.getX() <= 100)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setSquare(7, 1);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && e.getY() <= 50) {
+                    game.setSquare(0, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setSquare(1, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setSquare(2, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setSquare(3, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setSquare(4, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setSquare(5, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setSquare(6, 2);
+                } else if (((e.getX() > 100) && (e.getX() <= 150)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setSquare(7, 2);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && e.getY() <= 50) {
+                    game.setSquare(0, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setSquare(1, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setSquare(2, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setSquare(3, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setSquare(4, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setSquare(5, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setSquare(6, 3);
+                } else if (((e.getX() > 150) && (e.getX() <= 200)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setSquare(7, 3);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && e.getY() <= 50) {
+                    game.setSquare(0, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setSquare(1, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setSquare(2, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setSquare(3, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setSquare(4, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setSquare(5, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setSquare(6, 4);
+                } else if (((e.getX() > 200) && (e.getX() <= 250)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setSquare(7, 4);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && e.getY() <= 50) {
+                    game.setSquare(0, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setSquare(1, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setSquare(2, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setSquare(3, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setSquare(4, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setSquare(5, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setSquare(6, 5);
+                } else if (((e.getX() > 250) && (e.getX() <= 300)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setSquare(7, 5);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && e.getY() <= 50) {
+                    game.setSquare(0, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setSquare(1, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setSquare(2, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setSquare(3, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setSquare(4, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setSquare(5, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setSquare(6, 6);
+                } else if (((e.getX() > 300) && (e.getX() <= 350)) && ((e.getY() > 350) && (e.getY() <= 400))) {
+                    game.setSquare(7, 6);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && e.getY() <= 50) {
+                    game.setSquare(0, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 50) && (e.getY() <= 100))) {
+                    game.setSquare(1, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 100) && (e.getY() <= 150))) {
+                    game.setSquare(2, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 150) && (e.getY() <= 200))) {
+                    game.setSquare(3, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 200) && (e.getY() <= 250))) {
+                    game.setSquare(4, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 250) && (e.getY() <= 300))) {
+                    game.setSquare(5, 7);
+                } else if (((e.getX() > 350) && (e.getX() <= 400)) && ((e.getY() > 300) && (e.getY() <= 350))) {
+                    game.setSquare(6, 7);
+                } else {
+                    game.setSquare(7, 7);
                 }
-                if(game.getFromCol() == 2)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        c8.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        c8.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 3)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        d8.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        d8.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 4)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        e8.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        e8.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 5)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        f8.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        f8.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 6)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        g8.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        g8.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 7)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        h8.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        h8.setIcon(LSQ);
-                    }
-                }
-            }
-            if(game.getFromRow() == 1)
-            {
-                if(game.getFromCol() == 0)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        a7.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        a7.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 1)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        b7.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        b7.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 2)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        c7.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        c7.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 3)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        d7.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        d7.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 4)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        e7.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        e7.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 5)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        f7.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        f7.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 6)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        g7.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        g7.setIcon(LSQ);
-                    }
-                }
-                if(game.getFromCol() == 7)
-                {
-                    if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                    {
-                        h7.setIcon(DSQ);
-                    }
-                    else
-                    {
-                        h7.setIcon(LSQ);
-                    }
-                }
-            }
-            if(game.getFromRow() == 2) {
-                if (game.getFromCol() == 0) {
-                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
-                        a6.setIcon(DSQ);
-                    } else {
-                        a6.setIcon(LSQ);
-                    }
-                }
-                if (game.getFromCol() == 1) {
-                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
-                        b6.setIcon(DSQ);
-                    } else {
-                        b6.setIcon(LSQ);
-                    }
-                }
-                if (game.getFromCol() == 2) {
-                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
-                        c6.setIcon(DSQ);
-                    } else {
-                        c6.setIcon(LSQ);
-                    }
-                }
-                if (game.getFromCol() == 3) {
-                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
-                        d6.setIcon(DSQ);
-                    } else {
-                        d6.setIcon(LSQ);
-                    }
-                }
-                if (game.getFromCol() == 4) {
-                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
-                        e6.setIcon(DSQ);
-                    } else {
-                        e6.setIcon(LSQ);
-                    }
-                }
-                if (game.getFromCol() == 5) {
-                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
-                        f6.setIcon(DSQ);
-                    } else {
-                        f6.setIcon(LSQ);
-                    }
-                }
-                if (game.getFromCol() == 6) {
-                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
-                        g6.setIcon(DSQ);
-                    } else {
-                        g6.setIcon(LSQ);
-                    }
-                }
-                if (game.getFromCol() == 7) {
-                    if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
-                        h6.setIcon(DSQ);
-                    } else {
-                        h6.setIcon(LSQ);
-                    }
-                }
-            }
-                if(game.getFromRow() == 3)
-                {
-                    if(game.getFromCol() == 0)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
-                            a5.setIcon(DSQ);
+                mousePressed8thRank();
+                mousePressed7thRank();
+                mousePressed6thRank();
+                mousePressed5thRank();
+                mousePressed4thRank();
+                mousePressed3rdRank();
+                mousePressed2ndRank();
+                mousePressed1stRank();
+                if (game.getFromRow() == 0) {
+                    if (game.getFromCol() == 0) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            a8.setIcon(DSQ);
+                        } else {
+                            a8.setIcon(LSQ);
                         }
-                        else
-                        {
+                    }
+                    if (game.getFromCol() == 1) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            b8.setIcon(DSQ);
+                        } else {
+                            b8.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 2) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            c8.setIcon(DSQ);
+                        } else {
+                            c8.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 3) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            d8.setIcon(DSQ);
+                        } else {
+                            d8.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 4) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            e8.setIcon(DSQ);
+                        } else {
+                            e8.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 5) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            f8.setIcon(DSQ);
+                        } else {
+                            f8.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 6) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            g8.setIcon(DSQ);
+                        } else {
+                            g8.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 7) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            h8.setIcon(DSQ);
+                        } else {
+                            h8.setIcon(LSQ);
+                        }
+                    }
+                }
+                if (game.getFromRow() == 1) {
+                    if (game.getFromCol() == 0) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            a7.setIcon(DSQ);
+                        } else {
+                            a7.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 1) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            b7.setIcon(DSQ);
+                        } else {
+                            b7.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 2) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            c7.setIcon(DSQ);
+                        } else {
+                            c7.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 3) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            d7.setIcon(DSQ);
+                        } else {
+                            d7.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 4) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            e7.setIcon(DSQ);
+                        } else {
+                            e7.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 5) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            f7.setIcon(DSQ);
+                        } else {
+                            f7.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 6) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            g7.setIcon(DSQ);
+                        } else {
+                            g7.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 7) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            h7.setIcon(DSQ);
+                        } else {
+                            h7.setIcon(LSQ);
+                        }
+                    }
+                }
+                if (game.getFromRow() == 2) {
+                    if (game.getFromCol() == 0) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            a6.setIcon(DSQ);
+                        } else {
+                            a6.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 1) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            b6.setIcon(DSQ);
+                        } else {
+                            b6.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 2) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            c6.setIcon(DSQ);
+                        } else {
+                            c6.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 3) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            d6.setIcon(DSQ);
+                        } else {
+                            d6.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 4) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            e6.setIcon(DSQ);
+                        } else {
+                            e6.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 5) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            f6.setIcon(DSQ);
+                        } else {
+                            f6.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 6) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            g6.setIcon(DSQ);
+                        } else {
+                            g6.setIcon(LSQ);
+                        }
+                    }
+                    if (game.getFromCol() == 7) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            h6.setIcon(DSQ);
+                        } else {
+                            h6.setIcon(LSQ);
+                        }
+                    }
+                }
+                if (game.getFromRow() == 3) {
+                    if (game.getFromCol() == 0) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
+                            a5.setIcon(DSQ);
+                        } else {
                             a5.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 1)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 1) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             b5.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             b5.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 2)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 2) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             c5.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             c5.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 3)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 3) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             d5.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             d5.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 4)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 4) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             e5.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             e5.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 5)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 5) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             f5.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             f5.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 6)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 6) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             g5.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             g5.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 7)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 7) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             h5.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             h5.setIcon(LSQ);
                         }
                     }
                 }
-                if(game.getFromRow() == 4)
-                {
-                    if(game.getFromCol() == 0)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                if (game.getFromRow() == 4) {
+                    if (game.getFromCol() == 0) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             a4.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             a4.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 1)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 1) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             b4.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             b4.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 2)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 2) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             c4.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             c4.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 3)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 3) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             d4.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             d4.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 4)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 4) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             e4.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             e4.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 5)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 5) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             f4.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             f4.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 6)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 6) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             g4.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             g4.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 7)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 7) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             h4.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             h4.setIcon(LSQ);
                         }
                     }
                 }
-                if(game.getFromRow() == 5)
-                {
-                    if(game.getFromCol() == 0)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                if (game.getFromRow() == 5) {
+                    if (game.getFromCol() == 0) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             a3.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             a3.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 1)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 1) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             b3.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             b3.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 2)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 2) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             c3.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             c3.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 3)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 3) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             d3.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             d3.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 4)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 4) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             e3.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             e3.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 5)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 5) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             f3.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             f3.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 6)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 6) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             g3.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             g3.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 7)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 7) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             h3.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             h3.setIcon(LSQ);
                         }
                     }
                 }
-                if(game.getFromRow() == 6)
-                {
-                    if(game.getFromCol() == 0)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                if (game.getFromRow() == 6) {
+                    if (game.getFromCol() == 0) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             a2.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             a2.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 1)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 1) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             b2.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             b2.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 2)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 2) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             c2.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             c2.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 3)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 3) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             d2.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             d2.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 4)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 4) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             e2.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             e2.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 5)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 5) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             f2.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             f2.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 6)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 6) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             g2.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             g2.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 7)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 7) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             h2.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             h2.setIcon(LSQ);
                         }
                     }
                 }
-                if(game.getFromRow() == 7)
-                {
-                    if(game.getFromCol() == 0)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                if (game.getFromRow() == 7) {
+                    if (game.getFromCol() == 0) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             a1.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             a1.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 1)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 1) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             b1.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             b1.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 2)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 2) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             c1.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             c1.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 3)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 3) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             d1.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             d1.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 4)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 4) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             e1.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             e1.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 5)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 5) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             f1.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             f1.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 6)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 6) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             g1.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             g1.setIcon(LSQ);
                         }
                     }
-                    if(game.getFromCol() == 7)
-                    {
-                        if(game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D"))
-                        {
+                    if (game.getFromCol() == 7) {
+                        if (game.getBoardArraySpot(game.getFromRow(), game.getFromCol()).substring(2).equals("D")) {
                             h1.setIcon(DSQ);
-                        }
-                        else
-                        {
+                        } else {
                             h1.setIcon(LSQ);
                         }
                     }
                 }
             }
+        }
         }
     private void mousePressed8thRank()
     {
@@ -1922,7 +1458,18 @@ public class GUI implements MouseListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
                 {
-                    c8.setIcon(BKL);
+                    if(game.getFromCol() == 4)
+                    {
+                        c8.setIcon(BKL);
+                        d8.setIcon(BRD);
+                        a8.setIcon(LSQ);
+                        game.setBoardArraySpot(0, 3, "BRD");
+                        game.setBoardArraySpot(0, 0, "SQL");
+                    }
+                    else
+                    {
+                        c8.setIcon(BKL);
+                    }
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
                 {
@@ -2318,7 +1865,18 @@ public class GUI implements MouseListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKL"))
                 {
-                    g8.setIcon(BKL);
+                    if(game.getFromCol() == 4)
+                    {
+                        g8.setIcon(BKL);
+                        f8.setIcon(BRD);
+                        h8.setIcon(DSQ);
+                        game.setBoardArraySpot(0, 5, "BRD");
+                        game.setBoardArraySpot(0, 7, "SQD");
+                    }
+                    else
+                    {
+                        g8.setIcon(BKL);
+                    }
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BKD"))
                 {
@@ -7287,6 +6845,10 @@ public class GUI implements MouseListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
                 {
+                    promotionQueen = new ImageIcon("src/BQD.png");
+                    promotionRook = new ImageIcon("src/BRL.png");
+                    promotionBishop = new ImageIcon("src/BQD.png");
+                    promotionNight = new ImageIcon("src/BNL.png");
                     a1.setIcon(BPD);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
@@ -7478,7 +7040,18 @@ public class GUI implements MouseListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
                 {
-                    c1.setIcon(WKD);
+                    if(game.getFromCol() == 4)
+                    {
+                        c1.setIcon(WKD);
+                        d1.setIcon(WRL);
+                        a1.setIcon(DSQ);
+                        game.setBoardArraySpot(7, 3, "WRL");
+                        game.setBoardArraySpot(7, 0, "SQD");
+                    }
+                    else
+                    {
+                        c1.setIcon(WKD);
+                    }
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
                 {
@@ -7874,7 +7447,19 @@ public class GUI implements MouseListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WKD"))
                 {
-                    g1.setIcon(WKD);
+                    if(game.getFromCol() == 4)
+                    {
+                        g1.setIcon(WKD);
+                        f1.setIcon(WRL);
+                        h1.setIcon(LSQ);
+                        game.setBoardArraySpot(7, 5, "WRL");
+                        game.setBoardArraySpot(7, 7, "SQL");
+                    }
+                    else
+                    {
+                        g1.setIcon(WKD);
+                    }
+
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
                 {
@@ -8027,21 +7612,9 @@ public class GUI implements MouseListener
         }
     }
 
-    public void mousePressed(MouseEvent e)
-    {
-
-    }
-
-    public void mouseReleased(MouseEvent e)
-    {
-    }
-
-    public void mouseEntered(MouseEvent e)
-    {
-    }
-
-    public void mouseExited(MouseEvent e)
-    {
-    }
+    public void mousePressed(MouseEvent e) {}
+    public void mouseReleased(MouseEvent e) {}
+    public void mouseEntered(MouseEvent e) {}
+    public void mouseExited(MouseEvent e) {}
 
 }

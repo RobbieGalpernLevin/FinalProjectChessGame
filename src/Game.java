@@ -55,6 +55,11 @@ public class Game {
         return boardArray[r][c];
     }
 
+    public void setBoardArraySpot(int r, int c, String piece)
+    {
+        boardArray[r][c] = piece;
+    }
+
     public void setPiece(int r, int c) {
         piece = boardArray[r][c];
         fromRow = r;
