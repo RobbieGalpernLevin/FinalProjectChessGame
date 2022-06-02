@@ -24,7 +24,7 @@ import java.awt.GridLayout;
 
 import java.util.Arrays;
 
-public class GUI implements MouseListener
+public class GUI implements MouseListener, ActionListener
 {
     private JFrame frame;
     private JPanel board;
@@ -120,18 +120,12 @@ public class GUI implements MouseListener
     private JLabel h8;
 
     private Game game;
-    private boolean promoting;
     private JFrame promotionFrame;
-    private JPanel promotionPanelL;
-    private JLabel promotionQueenL;
-    private JLabel promotionRookL;
-    private JLabel promotionBishopL;
-    private JLabel promotionNightL;
-    private ImageIcon promotionQueen;
-    private ImageIcon promotionRook;
-    private ImageIcon promotionBishop;
-    private ImageIcon promotionNight;
-
+    private JPanel promotionPanel;
+    private JTextField promotionField;
+    private JButton enter;
+    private String promotionPiece;
+    private String promotionSquare;
 
     public GUI()
     {
@@ -141,8 +135,14 @@ public class GUI implements MouseListener
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         promotionFrame = new JFrame("Select Piece To Promote To");
         promotionFrame.setResizable(false);
-        promotionFrame.setLocation(700, 300);
+        promotionFrame.setLocation(850, 230);
         promotionFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        enter = new JButton("Enter");
+        enter.addActionListener(this);
+        promotionPanel = new JPanel();
+        promotionField = new JTextField(1);
+        promotionPiece = "";
+        promotionSquare = "";
         board = new JPanel();
         game = new Game();
         WPL = new ImageIcon("src/WPL.png");
@@ -169,8 +169,8 @@ public class GUI implements MouseListener
         BQD = new ImageIcon("src/BQD.png");
         BKL = new ImageIcon("src/BKL.png");
         BKD = new ImageIcon("src/BKD.png");
-        LSQ = new ImageIcon("src/SQL.png");
-        DSQ = new ImageIcon("src/SQD.png");
+        LSQ = new ImageIcon("src/LSQ.png");
+        DSQ = new ImageIcon("src/DSQ.png");
 
         Image LSQImage = LSQ.getImage();
         Image scaledLSQ = LSQImage.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH);
@@ -342,7 +342,11 @@ public class GUI implements MouseListener
         h1 = new JLabel(WRL);
 
         game = new Game();
-        promoting = false;
+
+        promotionPanel.add(promotionField);
+        promotionPanel.add(enter);
+        promotionFrame.add(promotionPanel);
+        promotionFrame.pack();
 
     }
 
@@ -421,21 +425,19 @@ public class GUI implements MouseListener
 
     public void mouseClicked(MouseEvent e)
     {
-        if(promoting)
+            if (game.getPiece().equals(""))
         {
-
-        }
-        else
-        {
-
-            if (game.getPiece().equals("")) {
-                if (e.getX() <= 50 && e.getY() <= 50) {
+                if (e.getX() <= 50 && e.getY() <= 50)
+            {
                     game.setPiece(0, 0);
-                } else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100))) {
+                } else if (e.getX() <= 50 && ((e.getY() > 50) && (e.getY() <= 100)))
+            {
                     game.setPiece(1, 0);
-                } else if (e.getX() <= 50 && ((e.getY() > 100) && (e.getY() <= 150))) {
+                } else if (e.getX() <= 50 && ((e.getY() > 100) && (e.getY() <= 150)))
+            {
                     game.setPiece(2, 0);
-                } else if (e.getX() <= 50 && ((e.getY() > 150) && (e.getY() <= 200))) {
+                } else if (e.getX() <= 50 && ((e.getY() > 150) && (e.getY() <= 200)))
+            {
                     game.setPiece(3, 0);
                 } else if (e.getX() <= 50 && ((e.getY() > 200) && (e.getY() <= 250))) {
                     game.setPiece(4, 0);
@@ -1162,7 +1164,6 @@ public class GUI implements MouseListener
                 }
             }
         }
-        }
     private void mousePressed8thRank()
     {
         if(game.getToRow() == 0)
@@ -1171,7 +1172,8 @@ public class GUI implements MouseListener
             {
                 if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
                 {
-                    a8.setIcon(WPL);
+                    promotionSquare = "a8";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
                 {
@@ -6845,11 +6847,8 @@ public class GUI implements MouseListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
                 {
-                    promotionQueen = new ImageIcon("src/BQD.png");
-                    promotionRook = new ImageIcon("src/BRL.png");
-                    promotionBishop = new ImageIcon("src/BQD.png");
-                    promotionNight = new ImageIcon("src/BNL.png");
-                    a1.setIcon(BPD);
+                    promotionSquare = "a1";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
                 {
@@ -6945,7 +6944,8 @@ public class GUI implements MouseListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
                 {
-                    b1.setIcon(BPL);
+                    promotionSquare = "b1";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
                 {
@@ -7059,7 +7059,8 @@ public class GUI implements MouseListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
                 {
-                    c1.setIcon(BPD);
+                    promotionSquare = "c1";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
                 {
@@ -7154,7 +7155,8 @@ public class GUI implements MouseListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
                 {
-                    d1.setIcon(BPL);
+                    promotionSquare = "d1";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
                 {
@@ -7616,5 +7618,332 @@ public class GUI implements MouseListener
     public void mouseReleased(MouseEvent e) {}
     public void mouseEntered(MouseEvent e) {}
     public void mouseExited(MouseEvent e) {}
+
+    public void actionPerformed(ActionEvent e)
+    {
+        promotionPiece = promotionField.getText();
+        if(promotionSquare.equals("a8"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                a8.setIcon(WQL);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                a8.setIcon(WNL);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                a8.setIcon(WBL);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                a8.setIcon(WRL);
+            }
+        }
+        if(promotionSquare.equals("b8"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                b8.setIcon(WQD);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                b8.setIcon(WND);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                b8.setIcon(WBD);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                b8.setIcon(WRD);
+            }
+        }
+        if(promotionSquare.equals("c8"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                c8.setIcon(WQL);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                c8.setIcon(WNL);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                c8.setIcon(WBL);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                c8.setIcon(WRL);
+            }
+        }
+        if(promotionSquare.equals("d8"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                d8.setIcon(WQD);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                d8.setIcon(WND);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                d8.setIcon(WBD);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                d8.setIcon(WRD);
+            }
+        }
+        if(promotionSquare.equals("e8"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                e8.setIcon(WQL);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                e8.setIcon(WNL);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                e8.setIcon(WBL);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                e8.setIcon(WRL);
+            }
+        }
+        if(promotionSquare.equals("f8"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                f8.setIcon(WQD);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                f8.setIcon(WND);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                f8.setIcon(WBD);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                f8.setIcon(WRD);
+            }
+        }
+        if(promotionSquare.equals("g8"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                g8.setIcon(WQL);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                g8.setIcon(WNL);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                g8.setIcon(WBL);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                g8.setIcon(WRL);
+            }
+        }
+        if(promotionSquare.equals("h8"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                h8.setIcon(WQD);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                h8.setIcon(WND);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                h8.setIcon(WBD);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                h8.setIcon(WRD);
+            }
+        }
+        if(promotionSquare.equals("a1"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                a1.setIcon(BQD);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                a1.setIcon(BND);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                a1.setIcon(BBD);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                a1.setIcon(BRD);
+            }
+        }
+        if(promotionSquare.equals("b1"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                b1.setIcon(BQL);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                b1.setIcon(BNL);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                b1.setIcon(BBL);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                b1.setIcon(BRL);
+            }
+        }
+        if(promotionSquare.equals("c1"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                c1.setIcon(BQD);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                c1.setIcon(BND);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                c1.setIcon(BBD);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                c1.setIcon(BRD);
+            }
+        }
+        if(promotionSquare.equals("d1"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                d1.setIcon(BQL);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                d1.setIcon(BNL);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                d1.setIcon(BBL);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                d1.setIcon(BRL);
+            }
+        }
+        if(promotionSquare.equals("e1"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                e1.setIcon(BQD);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                e1.setIcon(BND);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                e1.setIcon(BBD);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                a1.setIcon(BRD);
+            }
+        }
+        if(promotionSquare.equals("f1"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                f1.setIcon(BQL);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                f1.setIcon(BNL);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                f1.setIcon(BBL);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                f1.setIcon(BRL);
+            }
+        }
+        if(promotionSquare.equals("g1"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                g1.setIcon(BQD);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                g1.setIcon(BND);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                g1.setIcon(BBD);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                g1.setIcon(BRD);
+            }
+        }
+        if(promotionSquare.equals("h1"))
+        {
+            promotionSquare = "";
+            if(promotionPiece.equals("Q"))
+            {
+                h1.setIcon(BQL);
+            }
+            else if(promotionPiece.equals("N"))
+            {
+                h1.setIcon(BNL);
+            }
+            else if(promotionPiece.equals("B"))
+            {
+                h1.setIcon(BBL);
+            }
+            else if(promotionPiece.equals("R"))
+            {
+                h1.setIcon(BRL);
+            }
+        }
+        promotionField.setText("");
+        promotionFrame.setVisible(false);
+    }
 
 }
