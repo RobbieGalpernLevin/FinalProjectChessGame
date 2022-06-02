@@ -1277,7 +1277,8 @@ public class GUI implements MouseListener, ActionListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
                 {
-                    b8.setIcon(WPD);
+                    promotionSquare = "b8";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
                 {
@@ -1372,7 +1373,8 @@ public class GUI implements MouseListener, ActionListener
             {
                 if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
                 {
-                    c8.setIcon(WPL);
+                    promotionSquare = "c8";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
                 {
@@ -1486,7 +1488,8 @@ public class GUI implements MouseListener, ActionListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
                 {
-                    d8.setIcon(WPD);
+                    promotionSquare = "d8";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
                 {
@@ -1581,7 +1584,8 @@ public class GUI implements MouseListener, ActionListener
             {
                 if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
                 {
-                    e8.setIcon(WPL);
+                    promotionSquare = "e8";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
                 {
@@ -1684,7 +1688,8 @@ public class GUI implements MouseListener, ActionListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
                 {
-                    f8.setIcon(WPD);
+                    promotionSquare = "f8";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
                 {
@@ -1779,7 +1784,8 @@ public class GUI implements MouseListener, ActionListener
             {
                 if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPL"))
                 {
-                    g8.setIcon(WPL);
+                    promotionSquare = "g8";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
                 {
@@ -1893,7 +1899,8 @@ public class GUI implements MouseListener, ActionListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WPD"))
                 {
-                    h8.setIcon(WPD);
+                    promotionSquare = "h8";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("WRL"))
                 {
@@ -7259,7 +7266,8 @@ public class GUI implements MouseListener, ActionListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
                 {
-                    e1.setIcon(BPD);
+                    promotionSquare = "e1";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
                 {
@@ -7354,7 +7362,8 @@ public class GUI implements MouseListener, ActionListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
                 {
-                    f1.setIcon(BPL);
+                    promotionSquare = "f1";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
                 {
@@ -7469,7 +7478,8 @@ public class GUI implements MouseListener, ActionListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
                 {
-                    g1.setIcon(BPD);
+                    promotionSquare = "g1";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BRL"))
                 {
@@ -7564,7 +7574,8 @@ public class GUI implements MouseListener, ActionListener
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPL"))
                 {
-                    h1.setIcon(BPL);
+                    promotionSquare = "h1";
+                    promotionFrame.setVisible(true);
                 }
                 else if(game.getBoardArraySpot(game.getToRow(), game.getToCol()).equals("BPD"))
                 {
