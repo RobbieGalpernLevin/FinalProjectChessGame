@@ -1,28 +1,14 @@
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.JTextArea;
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
-
-import java.awt.BorderLayout;
 import java.awt.Image;
-import java.awt.Color;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ArrayList;
-import javax.swing.Icon;
 import java.awt.GridLayout;
-
-import java.util.Arrays;
 
 public class GUI implements MouseListener, ActionListener
 {
@@ -119,13 +105,14 @@ public class GUI implements MouseListener, ActionListener
     private JLabel h7;
     private JLabel h8;
 
-    private Game game;
     private JFrame promotionFrame;
     private JPanel promotionPanel;
     private JTextField promotionField;
     private JButton enter;
     private String promotionPiece;
     private String promotionSquare;
+
+    private Game game;
 
     public GUI()
     {
@@ -145,32 +132,32 @@ public class GUI implements MouseListener, ActionListener
         promotionSquare = "";
         board = new JPanel();
         game = new Game();
-        WPL = new ImageIcon("src/WPL.png");
-        WPD = new ImageIcon("src/WPD.png");
-        WRL = new ImageIcon("src/WRL.png");
-        WRD = new ImageIcon("src/WRD.png");
-        WNL = new ImageIcon("src/WNL.png");
-        WND = new ImageIcon("src/WND.png");
-        WBL = new ImageIcon("src/WBL.png");
-        WBD = new ImageIcon("src/WBD.png");
-        WQL = new ImageIcon("src/WQL.png");
-        WQD = new ImageIcon("src/WQD.png");
-        WKL = new ImageIcon("src/WKL.png");
-        WKD = new ImageIcon("src/WKD.png");
-        BPL = new ImageIcon("src/BPL.png");
-        BPD = new ImageIcon("src/BPD.png");
-        BRL = new ImageIcon("src/BRL.png");
-        BRD = new ImageIcon("src/BRD.png");
-        BNL = new ImageIcon("src/BNL.png");
-        BND = new ImageIcon("src/BND.png");
-        BBL = new ImageIcon("src/BBL.png");
-        BBD = new ImageIcon("src/BBD.png");
-        BQL = new ImageIcon("src/BQL.png");
-        BQD = new ImageIcon("src/BQD.png");
-        BKL = new ImageIcon("src/BKL.png");
-        BKD = new ImageIcon("src/BKD.png");
-        LSQ = new ImageIcon("src/LSQ.png");
-        DSQ = new ImageIcon("src/DSQ.png");
+        WPL = new ImageIcon("src/WhitePieces/WPL.png");
+        WPD = new ImageIcon("src/WhitePieces/WPD.png");
+        WRL = new ImageIcon("src/WhitePieces/WRL.png");
+        WRD = new ImageIcon("src/WhitePieces/WRD.png");
+        WNL = new ImageIcon("src/WhitePieces/WNL.png");
+        WND = new ImageIcon("src/WhitePieces/WND.png");
+        WBL = new ImageIcon("src/WhitePieces/WBL.png");
+        WBD = new ImageIcon("src/WhitePieces/WBD.png");
+        WQL = new ImageIcon("src/WhitePieces/WQL.png");
+        WQD = new ImageIcon("src/WhitePieces/WQD.png");
+        WKL = new ImageIcon("src/WhitePieces/WKL.png");
+        WKD = new ImageIcon("src/WhitePieces/WKD.png");
+        BPL = new ImageIcon("src/BlackPieces/BPL.png");
+        BPD = new ImageIcon("src/BlackPieces/BPD.png");
+        BRL = new ImageIcon("src/BlackPieces/BRL.png");
+        BRD = new ImageIcon("src/BlackPieces/BRD.png");
+        BNL = new ImageIcon("src/BlackPieces/BNL.png");
+        BND = new ImageIcon("src/BlackPieces/BND.png");
+        BBL = new ImageIcon("src/BlackPieces/BBL.png");
+        BBD = new ImageIcon("src/BlackPieces/BBD.png");
+        BQL = new ImageIcon("src/BlackPieces/BQL.png");
+        BQD = new ImageIcon("src/BlackPieces/BQD.png");
+        BKL = new ImageIcon("src/BlackPieces/BKL.png");
+        BKD = new ImageIcon("src/BlackPieces/BKD.png");
+        LSQ = new ImageIcon("src/Squares/LSQ.png");
+        DSQ = new ImageIcon("src/Squares/DSQ.png");
 
         Image LSQImage = LSQ.getImage();
         Image scaledLSQ = LSQImage.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH);
